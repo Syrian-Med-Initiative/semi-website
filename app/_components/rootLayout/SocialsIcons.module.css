@@ -2,4 +2,8 @@
     display: flex;
     gap: 1rem;
 }
+.socials a{
+    display:flex;
+    align-items: center;
+}
 
