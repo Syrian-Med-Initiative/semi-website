@@ -1,0 +1,35 @@
+.burger {
+    display: none;
+    cursor: pointer;
+    margin-left: auto;
+}
+
+.burger .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    transition: all 0.3s ease;
+    background-color: var(--foreground);
+}
+
+.burger.active .bar:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.burger.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.burger.active .bar:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* responsive  */
+@media (max-width: 768px) {
+    .burger {
+        display: block;
+    }
+}
+
+/* end responsive */
