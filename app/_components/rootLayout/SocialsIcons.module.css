@@ -1,12 +1,5 @@
 .socials{
     display: flex;
+    gap: 1rem;
 }
 
-.socials a{
-    padding: 0 10px;
-    border-right: 1px solid var(--foreground)
-}
-
-.socials a:last-child{
-    border-right: none;
-}
