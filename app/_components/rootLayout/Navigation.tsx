@@ -15,10 +15,11 @@ function Navigation() {
         <nav className={styles.nav}>
             <div className={styles.logo}>
                 <Image
-                    src="/image.png"
+                    src="/logo.png"
                     alt="Logo"
-                    width={50}
-                    height={50}
+                    width={100}
+                    height={20}
+                    quality={100}
                 />
             </div>
             <span>Syrian Emergency Medicine Initiative</span>
