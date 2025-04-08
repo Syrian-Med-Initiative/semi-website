@@ -1,4 +1,4 @@
-export interface eventData{
+export interface EventData{
     image: string,
     title: string,
     date: string,

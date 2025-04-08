@@ -1,9 +1,9 @@
 import Image from 'next/image'
 import styles from './EventCard.module.css'
-import { eventData } from '@/app/_types/eventData'
+import { EventData } from '@/app/_types/EventData'
 
 // a card component to display event details image, title, date, time, location, description and a button to register
-function EventCard({eventData}: {eventData: eventData}) {
+function EventCard(eventData: EventData) {
     const { image, title, date, time, location, description } = eventData
     return (
         <div className={styles.card}>
