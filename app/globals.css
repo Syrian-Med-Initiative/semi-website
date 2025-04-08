@@ -1,7 +1,13 @@
 :root {
   --background: #ffffff;
   --foreground: #000000;
-  --primary: #61dafb;
+  --primary: #4B7F52;
+  --primary-light: #4B7F52;
+  --primary-dark: #4B7F52;
+  --secondary: #7DD181;
+  --secondary-light: #7DD181;
+  --secondary-dark: #7DD181;
+
   --text: #333333;
   --text-light: #666666;
   --border: #eaeaea;
