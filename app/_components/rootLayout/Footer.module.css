@@ -3,10 +3,9 @@
     color:var(--foreground);
     padding:1.5rem 2rem;
     text-align: center;
-    position: fixed;
+    position: sticky;
     bottom: 0;
     width: 100%;
-    /* font-size: 14px; */
     z-index: 1000;
     box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
     display: flex;
