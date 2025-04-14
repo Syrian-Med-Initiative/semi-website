@@ -1,5 +1,3 @@
-import { ReactNode } from "react";
-
 export interface CardData {
   imageUrl: string;
   title: string;
@@ -8,5 +6,8 @@ export interface CardData {
   location?: string;
   description: string;
   onRegister?: (e: React.MouseEvent<HTMLButtonElement>) => void;
-  icons?: ReactNode[];
+  facebookUsername?: string;
+  twitterUsername?: string;
+  instagramUsername?: string;
+  linkedinUsername?: string;
 }

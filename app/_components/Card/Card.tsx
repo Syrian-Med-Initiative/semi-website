@@ -1,8 +1,10 @@
+"use client"
 import Image from "next/image";
 import styles from "./Card.module.css";
-import { useState } from "react";
+import { JSX, useState } from "react";
 import { CardData } from "@/app/_types/CardType";
 import Button from "../Button/Button";
+import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa";
 
 function Card(cardData: CardData) {
   const {
@@ -13,7 +15,10 @@ function Card(cardData: CardData) {
     location,
     description,
     onRegister,
-    icons,
+    facebookUsername,
+    twitterUsername,
+    instagramUsername,
+    linkedinUsername,
   } = cardData;
 
   const [isExpanded, setIsExpanded] = useState(false);
@@ -21,6 +26,29 @@ function Card(cardData: CardData) {
   const toggleReadMore = () => {
     setIsExpanded(!isExpanded);
   };
+
+  const socialPlatforms = [
+    facebookUsername && {
+      username: facebookUsername,
+      icon: <FaFacebook size={22} color="#6b7280" />,
+      url: (username: string) => `https://facebook.com/${username}`,
+    },
+    twitterUsername && {
+      username: twitterUsername,
+      icon: <FaTwitter size={22} color="#6b7280" />,
+      url: (username: string) => `https://twitter.com/${username}`,
+    },
+    instagramUsername && {
+      username: instagramUsername,
+      icon: <FaInstagram size={22} color="#6b7280" />,
+      url: (username: string) => `https://instagram.com/${username}`,
+    },
+    linkedinUsername && {
+      username: linkedinUsername,
+      icon: <FaLinkedin size={22} color="#6b7280" />,
+      url: (username: string) => `https://linkedin.com/in/${username}`,
+    },
+  ].filter((platform): platform is { username: string; icon: JSX.Element; url: (username: string) => string } => !!platform) || [];
 
   return (
     <div className={styles.card}>
@@ -53,20 +81,22 @@ function Card(cardData: CardData) {
         )}
       </p>
 
-      {icons && (
-        <div className={styles.icons}>
-          {icons.map((icon, index) => {
-            return (
-              <span key={index} className={styles.icon}>
-                {icon}
-              </span>
-            );
-          })}
-        </div>
-      )}
+      <div className={styles.icons}>
+        {socialPlatforms.map(({ username, icon, url }, index) => (
+          <a
+            key={index}
+            href={url(username)}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.icon}
+          >
+            {icon}
+          </a>
+        ))}
+      </div>
 
       {onRegister && (
-        <Button clickFn={(e:React.MouseEvent<HTMLButtonElement>) => onRegister(e)}>
+        <Button clickFn={(e: React.MouseEvent<HTMLButtonElement>) => onRegister(e)}>
           Register
         </Button>
       )}

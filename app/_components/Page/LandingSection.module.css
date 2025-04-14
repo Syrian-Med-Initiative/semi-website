@@ -1,0 +1,57 @@
+
+.landingSection {
+    width: 100%;
+    height: 100vh;
+    background-image: url("../../../public/landing2.png");
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.landingSection .contentContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.landingSection .contentContainer h1 {
+    font-size: 3rem;
+    color: white;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    padding: 0;
+}
+
+.cta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+@media screen and (max-width: 768px) {
+    .landingSection {
+        height: 100vh;
+        background-image: url("../../../public/landing-mobile.png");
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .landingSection .contentContainer h1 {
+        font-size: 2rem;
+    }
+    
+    .landingSection .contentContainer p {
+        font-size: 1.2rem;
+    }
+    .landingSection .contentContainer .cta {
+        flex-direction: column;
+        gap: 10px;
+    }
+  
+}

@@ -1,3 +1,4 @@
+import Button from '../Button/Button';
 import styles from './Footer.module.css';
 import SocialsIcons from './SocialsIcons';
 
