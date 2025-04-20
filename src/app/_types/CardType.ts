@@ -6,6 +6,7 @@ export interface CardData {
   location?: string;
   description: string;
   onRegister?: (e: React.MouseEvent<HTMLButtonElement>) => void;
+  registerBtn?: boolean;
   facebookUsername?: string;
   twitterUsername?: string;
   instagramUsername?: string;

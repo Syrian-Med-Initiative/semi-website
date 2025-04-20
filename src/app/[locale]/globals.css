@@ -12,6 +12,15 @@
   --border: #eaeaea;
 }
 
+html {
+  font-family: var(--font-inter); /* Default font */
+}
+
+html[lang="ar"] {
+  font-family: var(--font-cairo); /* Arabic font */
+}
+
+
 /* @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
@@ -61,7 +70,6 @@ body {
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -86,6 +94,7 @@ body {
   font-size: 20px;
   text-align: center;
   color: #797979;
+  letter-spacing: normal;
 }
 
 @media screen and (max-width: 768px) {
