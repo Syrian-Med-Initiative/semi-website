@@ -1,9 +1,10 @@
 import { useTranslations } from "next-intl";
 import Card from "../../_components/Card/Card";
 import { CardData } from "../../_types/CardType";
+import Calendar from "../../_lib/Calendar";
 
 function Page() {
-  const t = useTranslations('eventPage');
+  const t = useTranslations("eventPage");
   return (
     <div
       style={{
@@ -12,8 +13,14 @@ function Page() {
         justifyContent: "center",
         flexDirection: "column",
         paddingTop: "100px",
+        alignItems: "center",
       }}
     >
+      <h2 className="special-heading">{t("eventsCalendar")}</h2>
+        <div className="container">
+        <Calendar/>
+        </div>
+
       <section>
         <h2 className="special-heading">{t("upcomingEvents")}</h2>
         <div style={{ display: "flex", gap: "20px", flexWrap: "wrap" }}>

@@ -30,6 +30,16 @@
   },
   "eventPage": {
     "upcomingEvents": "الأحداث القادمة",
-    "pastEvents": "الأحداث السابقة"
+    "pastEvents": "الأحداث السابقة",
+    "eventsCalendar": "تقويم الأحداث"
+  },
+  "calendar": {
+    "today": "اليوم",
+    "month": "شهر",
+    "week": "أسبوع",
+    "year": "سنة",
+    "day": "يوم",
+    "list": "قائمة"
+
   }
 }

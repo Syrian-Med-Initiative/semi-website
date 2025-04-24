@@ -7,12 +7,10 @@
       "description": "Learn, train, and contribute to saving lives through a specialized platform for emergency physicians.",
       "SupportUs": "Support our mission",
       "upcomingEvents": "Upcoming Events"
-    }
-    ,
+    },
     "aboutSection": {
       "title": "About Us",
-      "description": "We are a group of emergency medicine physicians dedicated to providing the best possible care for patients in emergency situations."
-    ,
+      "description": "We are a group of emergency medicine physicians dedicated to providing the best possible care for patients in emergency situations.",
       "learnMore": "Learn More"
     }
   },
@@ -23,7 +21,6 @@
     "events": "Events",
     "resources": "Resources",
     "supportUs": "Support Us"
-    
   },
   "footer": {
     "allRightsReserved": "© 2025 Syrian Emergency Medicine Initiative. All rights reserved.",
@@ -33,6 +30,16 @@
   },
   "eventPage": {
     "upcomingEvents": "Upcoming Events",
-    "pastEvents": "Past Events"
+    "pastEvents": "Past Events",
+    "eventsCalendar": "Events Calendar"
+  },
+  "calendar": {
+    "today": "Today",
+    "month": "Month",
+    "year": "Year",
+    "day": "Day",
+    "week": "Week",
+    "list": "List"
+
   }
 }

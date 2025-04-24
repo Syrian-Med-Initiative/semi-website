@@ -17,6 +17,7 @@ function Navigation() {
   function handleMenuToggle() {
     setIsActive(!isActive);
   }
+  console.log(pathname)
 
   function switchLanguage() {
     const currentLocale = pathname.split('/')[1]; // Extract current locale from the path
@@ -42,20 +43,20 @@ function Navigation() {
       </span>
 
       <ul className={`${isActive ? styles.active : ""}`}>
-        <li>
-          <Link href="/">{t("home")}</Link>
+        <li className={`${pathname === `/${currentLocale}` ? styles.active : ""}`}>
+          <Link href="/" onClick={()=>{setIsActive(false)}}>{t("home")}</Link>
         </li>
-        <li>
-          <Link href="/about">{t("about")}</Link>
+        <li className={`${pathname.includes("/about") ? styles.active : ""}`}>
+          <Link href="/about" onClick={()=>{setIsActive(false)}}>{t("about")}</Link>
         </li>
-        <li>
-          <Link href="/events">{t("events")}</Link>
+        <li className={`${pathname.includes("/events") ? styles.active : ""}`}>
+          <Link href="/events" onClick={()=>{setIsActive(false)}}>{t("events")}</Link>
         </li>
-        <li>
-          <Link href="/Resources">{t("resources")}</Link>
+        <li className={`${pathname.includes("/members" )? styles.active : ""}`}>
+          <Link href="/Resources" onClick={()=>{setIsActive(false)}}>{t("resources")}</Link>
         </li>
-        <li>
-          <Link href="/support">{t("supportUs")}</Link>
+        <li className={`${pathname.includes("/support") ? styles.active : ""}`}>
+          <Link href="/support" onClick={()=>{setIsActive(false)}}>{t("supportUs")}</Link>
         </li>
       </ul>
       <button onClick={switchLanguage} className={styles.langSwitch}>
