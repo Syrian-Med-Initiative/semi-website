@@ -20,15 +20,6 @@ function Page() {
         <div className="container">
         <Calendar/>
         </div>
-
-      <section>
-        <h2 className="special-heading">{t("upcomingEvents")}</h2>
-        <div style={{ display: "flex", gap: "20px", flexWrap: "wrap" }}>
-          {eventsData.map((event, index) => (
-            <Card cardData={event} key={index} />
-          ))}
-        </div>
-      </section>
       
       <section>
         <h2 className="special-heading">{t("pastEvents")}</h2>
