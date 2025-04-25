@@ -2,9 +2,10 @@
 import Image from "next/image";
 import styles from "./Card.module.css";
 import { JSX, useState } from "react";
-import { CardData } from "@/app/_types/CardType";
+
 import Button from "../Button/Button";
 import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa";
+import { CardData } from "../../_types/CardType";
 
 function Card({ cardData }: { cardData: CardData }) {
   const {
