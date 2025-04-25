@@ -1,11 +1,9 @@
-import { useTranslations } from "next-intl";
+// import { useTranslations } from "next-intl";
 import styles from "./page.module.css";
-import { FaBook, FaNetworkWired, FaGraduationCap } from "react-icons/fa";
-import Button from "../../_components/Button/Button";
 import Image from "next/image";
 
 function AboutPage() {
-  const t = useTranslations("aboutPage");
+  // const t = useTranslations("aboutPage");
 
   return (
     <div className={styles.aboutPage}>
