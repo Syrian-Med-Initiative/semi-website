@@ -35,7 +35,7 @@ type FullCalendarEventType = {
     status?: string | null;
     sequence?: number | null;
   };
-}
+};
 export default function Calendar() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedEvent, setSelectedEvent] = useState<EventType | null>(null);
@@ -88,7 +88,7 @@ export default function Calendar() {
           listPlugin,
         ]}
         initialView={initialView}
-        events={events.map(event => ({
+        events={events.map((event) => ({
           ...event,
           start: event.start || undefined,
           end: event.end || undefined,
@@ -210,33 +210,35 @@ export default function Calendar() {
         >
           <div className={styles.modalBody}>
             <div className={styles.eventTime}>
-              {selectedEvent.start.toLocaleString("en", {
-                hour: "2-digit",
-                minute: "2-digit",
-              })}
+              {selectedEvent?.start &&
+                selectedEvent.start.toLocaleString("en", {
+                  hour: "2-digit",
+                  minute: "2-digit",
+                })}
               &nbsp;-&nbsp;
-              {selectedEvent.end.toLocaleString("en", {
-                hour: "2-digit",
-                minute: "2-digit",
-              })}
+              {selectedEvent?.end &&
+                selectedEvent.end.toLocaleString("en", {
+                  hour: "2-digit",
+                  minute: "2-digit",
+                })}
             </div>
-            {selectedEvent.location && (
+            {selectedEvent?.location && (
               <div className={styles.eventLocation}>
                 <strong>Location:</strong> {selectedEvent.location}
               </div>
             )}
 
-            {selectedEvent.url && (
+            {selectedEvent?.url && (
               <div className={styles.meetingLink}>
                 <a href={selectedEvent.url}>Join the meeting now</a>
               </div>
             )}
 
-            {selectedEvent.meetingId && (
+            {selectedEvent?.meetingId && (
               <p>meeting Id : {selectedEvent.meetingId}</p>
             )}
 
-            {selectedEvent.passcode && (
+            {selectedEvent?.passcode && (
               <p>Passcode : {selectedEvent.passcode}</p>
             )}
           </div>
