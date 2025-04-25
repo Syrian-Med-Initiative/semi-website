@@ -17,8 +17,13 @@
     overflow-x: auto;
     scroll-behavior: smooth;
     padding: 20px 0;
+  }
+
+  Html[lang="ar"] .carouselTrack {
     direction: rtl;
   }
+
+
   
   /* Individual carousel item */
   .carouselItem {

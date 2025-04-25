@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import Image from "next/image";
 import styles from "./Card.module.css";
 import { JSX, useState } from "react";
@@ -6,7 +6,7 @@ import { CardData } from "@/app/_types/CardType";
 import Button from "../Button/Button";
 import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa";
 
-function Card(cardData: CardData) {
+function Card({ cardData }: { cardData: CardData }) {
   const {
     imageUrl,
     title,
@@ -15,6 +15,7 @@ function Card(cardData: CardData) {
     location,
     description,
     onRegister,
+    registerBtn,
     facebookUsername,
     twitterUsername,
     instagramUsername,
@@ -27,28 +28,37 @@ function Card(cardData: CardData) {
     setIsExpanded(!isExpanded);
   };
 
-  const socialPlatforms = [
-    facebookUsername && {
-      username: facebookUsername,
-      icon: <FaFacebook size={22} color="#6b7280" />,
-      url: (username: string) => `https://facebook.com/${username}`,
-    },
-    twitterUsername && {
-      username: twitterUsername,
-      icon: <FaTwitter size={22} color="#6b7280" />,
-      url: (username: string) => `https://twitter.com/${username}`,
-    },
-    instagramUsername && {
-      username: instagramUsername,
-      icon: <FaInstagram size={22} color="#6b7280" />,
-      url: (username: string) => `https://instagram.com/${username}`,
-    },
-    linkedinUsername && {
-      username: linkedinUsername,
-      icon: <FaLinkedin size={22} color="#6b7280" />,
-      url: (username: string) => `https://linkedin.com/in/${username}`,
-    },
-  ].filter((platform): platform is { username: string; icon: JSX.Element; url: (username: string) => string } => !!platform) || [];
+  const socialPlatforms =
+    [
+      facebookUsername && {
+        username: facebookUsername,
+        icon: <FaFacebook size={22} color="#6b7280" />,
+        url: (username: string) => `https://facebook.com/${username}`,
+      },
+      twitterUsername && {
+        username: twitterUsername,
+        icon: <FaTwitter size={22} color="#6b7280" />,
+        url: (username: string) => `https://twitter.com/${username}`,
+      },
+      instagramUsername && {
+        username: instagramUsername,
+        icon: <FaInstagram size={22} color="#6b7280" />,
+        url: (username: string) => `https://instagram.com/${username}`,
+      },
+      linkedinUsername && {
+        username: linkedinUsername,
+        icon: <FaLinkedin size={22} color="#6b7280" />,
+        url: (username: string) => `https://linkedin.com/in/${username}`,
+      },
+    ].filter(
+      (
+        platform
+      ): platform is {
+        username: string;
+        icon: JSX.Element;
+        url: (username: string) => string;
+      } => !!platform
+    ) || [];
 
   return (
     <div className={styles.card}>
@@ -60,7 +70,6 @@ function Card(cardData: CardData) {
         height={300}
         className={styles.image}
       />
-
       <h2>{title}</h2>
 
       {date && <span className={styles.date}>Date: {date}</span>}
@@ -96,7 +105,17 @@ function Card(cardData: CardData) {
       </div>
 
       {onRegister && (
-        <Button clickFn={(e: React.MouseEvent<HTMLButtonElement>) => onRegister(e)}>
+        <Button
+          clickFn={(e: React.MouseEvent<HTMLButtonElement>) => onRegister(e)}
+        >
+          Register
+        </Button>
+      )}
+
+      {registerBtn && (
+        <Button
+          clickFn={() => () =>{alert("Register button clicked")}}
+        >
           Register
         </Button>
       )}

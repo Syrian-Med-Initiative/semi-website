@@ -1,0 +1,58 @@
+{
+  "homePage": {
+    "ourMembers": "Our Members",
+    "upcomingEvents": "Upcoming Events",
+    "landingSection": {
+      "title": "Together we elevate emergency medicine in Syria",
+      "description": "Learn, train, and contribute to saving lives through a specialized platform for emergency physicians.",
+      "SupportUs": "Support our mission",
+      "upcomingEvents": "Upcoming Events"
+    },
+    "aboutSection": {
+      "title": "About Us",
+      "description": "We are a group of emergency medicine physicians dedicated to providing the best possible care for patients in emergency situations.",
+      "learnMore": "Learn More"
+    },
+    "newsletter": "newsletter"
+  },
+  "navigation": {
+    "title": "Syrian Emergency Medicine Initiative",
+    "home": "Home",
+    "about": "About Us",
+    "events": "Events",
+    "resources": "Resources",
+    "supportUs": "Support Us"
+  },
+  "footer": {
+    "allRightsReserved": "© 2025 Syrian Emergency Medicine Initiative. All rights reserved.",
+    "contact": "Contact Us",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service"
+  },
+  "eventPage": {
+    "upcomingEvents": "Upcoming Events",
+    "pastEvents": "Past Events",
+    "eventsCalendar": "Events Calendar"
+  },
+  "calendar": {
+    "today": "Today",
+    "month": "Month",
+    "year": "Year",
+    "day": "Day",
+    "week": "Week",
+    "list": "List"
+
+  },
+  "aboutPage": {
+    "title": "Syrian Emergency Medicine Initiative",
+    "missionTitle": "Our Mission",
+    "missionContent": "SEMI is a volunteer-based effort founded by a group of Syrian physicians who practice in different countries around the world. The initiative aims to advance the field of Emergency Medicine (EM) in Syria and help in the post-conflict health care reconstruction.",
+    "objectivesTitle": "Our Objectives",
+    "educationTitle": "Education",
+    "educationContent": "We strive to educate and inspire the next generation of emergency physicians in Syria by equipping them with the latest knowledge, essential skills, and core values that we acquired by practicing in modern health care systems, and we are working on transferring this knowledge to Syrian Emergency physicians. To this end, we plan to sponsor conferences, workshops, symposia, and a virtual learning platform. Moreover, we strive to create a curriculum and a training program for the paramedics, and Emergency technicians.",
+    "integrationTitle": "National Integration",
+    "integrationContent": "Our goal is to update and improve the training programs across the different health systems in Syria into a high-quality national curriculum for emergency medicine residents. This ensures improved education and equal training opportunities for all, fostering a comprehensive and inclusive medical training system throughout the country.",
+    "networkTitle": "Building a Network of Stakeholders",
+    "networkContent": "Collaboration with other national and international groups and organizations who are interested in advancing health delivery and health education in Syria, and most importantly, coordinate with the Syrian Ministry of Health."
+  }
+}

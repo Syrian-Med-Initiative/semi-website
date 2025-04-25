@@ -1,26 +1,29 @@
-import Button from '../Button/Button';
+import { useTranslations } from 'next-intl';
 import styles from './Footer.module.css';
 import SocialsIcons from './SocialsIcons';
 
 function Footer() {
+    const t = useTranslations('footer');
     return (
         <footer className={styles.footer}>
-            <span>© 2023 Syrian Emergency Medicine Initiative. All rights reserved.</span>
+            <span>
+                {t('allRightsReserved')}
+                </span>
             <SocialsIcons/>
             <ul>
                 <li>
                     <a href="#" rel="noopener noreferrer">
-                        Terms of Service
+                        {t('terms')}
                     </a>
                 </li>
                 <li>
                     <a href="#" rel="noopener noreferrer">
-                        Privacy Policy
+                        {t('privacy')}
                     </a>
                 </li>
                 <li>
                     <a href="#" rel="noopener noreferrer">
-                        Contact Us
+                        {t('contact')}
                     </a>
                 </li>
             </ul>
