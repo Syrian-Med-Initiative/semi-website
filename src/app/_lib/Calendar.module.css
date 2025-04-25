@@ -1,0 +1,7 @@
+.modalBody{
+    padding: 20px 0;
+    border-radius: 8px;
+}
+.modalBody > * {
+    margin-top: 4px;
+}
