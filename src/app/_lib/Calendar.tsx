@@ -4,17 +4,43 @@ import dayGridPlugin from "@fullcalendar/daygrid";
 import listPlugin from "@fullcalendar/list";
 import iCalendarPlugin from "@fullcalendar/icalendar";
 import interactionPlugin from "@fullcalendar/interaction";
-import { use, useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Modal from "../_components/Modal/Modal";
 import styles from "./Calendar.module.css";
 import { useParams } from "next/navigation";
 import { useTranslations } from "next-intl";
 
+type EventType = {
+  title: string;
+  start: Date | null;
+  end: Date | null;
+  description?: string | null;
+  location?: string | null;
+  url?: string | null;
+  meetingId?: string | null;
+  passcode?: string | null;
+};
+type FullCalendarEventType = {
+  title: string;
+  start: Date | null;
+  end: Date | null;
+  location?: string | null;
+  description?: string | null;
+  allDay?: boolean;
+  extendedProps: {
+    url?: string | null;
+    meetingId?: string | null;
+    passcode?: string | null;
+    uid?: string | null;
+    status?: string | null;
+    sequence?: number | null;
+  };
+};
 export default function Calendar() {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [selectedEvent, setSelectedEvent] = useState<any>(null);
+  const [selectedEvent, setSelectedEvent] = useState<EventType | null>(null);
   const [initialView, setInitialView] = useState("dayGridMonth");
-  const [events, setEvents] = useState<any[]>([]);
+  const [events, setEvents] = useState<FullCalendarEventType[]>([]);
   const calendarRef = useRef<FullCalendar | null>(null);
 
   const params = useParams();
@@ -28,11 +54,17 @@ export default function Calendar() {
         throw new Error("Network response was not ok");
       }
       const data = await response.json();
-      setEvents(data);
+      setEvents(
+        data.map((event: FullCalendarEventType) => ({
+          ...event,
+          start: event.start || undefined,
+          end: event.end || undefined,
+        }))
+      );
     }
 
     fetchEvents();
-  },[]);
+  }, []);
 
   useEffect(() => {
     // Dynamically set the view based on screen width
@@ -56,7 +88,11 @@ export default function Calendar() {
           listPlugin,
         ]}
         initialView={initialView}
-        events={events}
+        events={events.map((event) => ({
+          ...event,
+          start: event.start || undefined,
+          end: event.end || undefined,
+        }))}
         headerToolbar={
           initialView === "listWeek"
             ? {
@@ -135,7 +171,7 @@ export default function Calendar() {
           setIsModalOpen(true);
         }}
         datesSet={(info) => {
-          if (initialView === "dayGridMonth" )return ;
+          if (initialView === "dayGridMonth") return;
           const calendarApi = info.view.calendar;
           const prevButton = document.querySelector(
             ".fc-prev-button"
@@ -174,33 +210,35 @@ export default function Calendar() {
         >
           <div className={styles.modalBody}>
             <div className={styles.eventTime}>
-              {selectedEvent.start.toLocaleString("en", {
-                hour: "2-digit",
-                minute: "2-digit",
-              })}
+              {selectedEvent?.start &&
+                selectedEvent.start.toLocaleString("en", {
+                  hour: "2-digit",
+                  minute: "2-digit",
+                })}
               &nbsp;-&nbsp;
-              {selectedEvent.end.toLocaleString("en", {
-                hour: "2-digit",
-                minute: "2-digit",
-              })}
+              {selectedEvent?.end &&
+                selectedEvent.end.toLocaleString("en", {
+                  hour: "2-digit",
+                  minute: "2-digit",
+                })}
             </div>
-            {selectedEvent.location && (
+            {selectedEvent?.location && (
               <div className={styles.eventLocation}>
                 <strong>Location:</strong> {selectedEvent.location}
               </div>
             )}
 
-            {selectedEvent.url && (
+            {selectedEvent?.url && (
               <div className={styles.meetingLink}>
                 <a href={selectedEvent.url}>Join the meeting now</a>
               </div>
             )}
 
-            {selectedEvent.meetingId && (
+            {selectedEvent?.meetingId && (
               <p>meeting Id : {selectedEvent.meetingId}</p>
             )}
 
-            {selectedEvent.passcode && (
+            {selectedEvent?.passcode && (
               <p>Passcode : {selectedEvent.passcode}</p>
             )}
           </div>
