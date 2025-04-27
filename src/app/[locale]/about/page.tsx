@@ -2,6 +2,8 @@ import { useTranslations } from "next-intl";
 import styles from "./page.module.css";
 import Image from "next/image";
 import { FaGraduationCap, FaHandshake, FaNetworkWired } from "react-icons/fa";
+import Card from "../../_components/Card/Card";
+import CarouselSection from "../../_components/Page/CarouselSection";
 
 function AboutPage() {
   const t = useTranslations("aboutPage");
@@ -68,6 +70,63 @@ function AboutPage() {
             </li>
           </ul>
         </section>
+        <CarouselSection
+        header={t("membersSection.title")}
+        items={[
+          <Card
+            cardData={{
+              imageUrl: "/landing.png",
+              title: "Emergency Medicine Workshop",
+              facebookUsername: "#",
+              instagramUsername: "#",
+              twitterUsername: "#",
+              linkedinUsername: "#",
+              description:
+                "Join us for a comprehensive workshop on the latest advancements in emergency medicine. This event is designed for healthcare professionals looking to enhance their skills and knowledge.",
+            }}
+            key={2}
+          />,
+          <Card
+            cardData={{
+              imageUrl: "/landing.png",
+              title: "Emergency Medicine Workshop",
+              facebookUsername: "#",
+              instagramUsername: "#",
+              twitterUsername: "#",
+              linkedinUsername: "#",
+              description:
+                "Join us for a comprehensive workshop on the latest advancements in emergency medicine. This event is designed for healthcare professionals looking to enhance their skills and knowledge.",
+            }}
+            key={3}
+          />,
+          <Card
+            cardData={{
+              imageUrl: "/landing.png",
+              title: "Emergency Medicine Workshop",
+              facebookUsername: "#",
+              instagramUsername: "#",
+              twitterUsername: "#",
+              linkedinUsername: "#",
+              description:
+                "Join us for a comprehensive workshop on the latest advancements in emergency medicine. This event is designed for healthcare professionals looking to enhance their skills and knowledge.",
+            }}
+            key={4}
+          />,
+          <Card
+            cardData={{
+              imageUrl: "/landing.png",
+              title: "ورشة عمل في طب الطوارئ",
+              facebookUsername: "#",
+              instagramUsername: "#",
+              twitterUsername: "#",
+              linkedinUsername: "#",
+              description:
+                "انضم إلينا في ورشة عمل شاملة حول أحدث التطورات في طب الطوارئ. تم تصميم هذا الحدث للمهنيين الصحيين الذين يتطلعون إلى تعزيز مهاراتهم ومعرفتهم.",
+            }}
+            key={5}
+          />,
+        ]}
+      />
       </div>
     </div>
   );
