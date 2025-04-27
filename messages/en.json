@@ -41,18 +41,24 @@
     "day": "Day",
     "week": "Week",
     "list": "List"
-
   },
   "aboutPage": {
-    "title": "Syrian Emergency Medicine Initiative",
-    "missionTitle": "Our Mission",
-    "missionContent": "SEMI is a volunteer-based effort founded by a group of Syrian physicians who practice in different countries around the world. The initiative aims to advance the field of Emergency Medicine (EM) in Syria and help in the post-conflict health care reconstruction.",
-    "objectivesTitle": "Our Objectives",
-    "educationTitle": "Education",
-    "educationContent": "We strive to educate and inspire the next generation of emergency physicians in Syria by equipping them with the latest knowledge, essential skills, and core values that we acquired by practicing in modern health care systems, and we are working on transferring this knowledge to Syrian Emergency physicians. To this end, we plan to sponsor conferences, workshops, symposia, and a virtual learning platform. Moreover, we strive to create a curriculum and a training program for the paramedics, and Emergency technicians.",
-    "integrationTitle": "National Integration",
-    "integrationContent": "Our goal is to update and improve the training programs across the different health systems in Syria into a high-quality national curriculum for emergency medicine residents. This ensures improved education and equal training opportunities for all, fostering a comprehensive and inclusive medical training system throughout the country.",
-    "networkTitle": "Building a Network of Stakeholders",
-    "networkContent": "Collaboration with other national and international groups and organizations who are interested in advancing health delivery and health education in Syria, and most importantly, coordinate with the Syrian Ministry of Health."
+    "landingSection": {
+      "title": "Syrian Emergency Medicine Initiative",
+      "description": "Uniting Syrian physicians worldwide to restore, strengthen, and lead the future of emergency medicine in Syria."
+    },
+    "missionSection": {
+      "title": "Our Mission",
+      "description": "SEMI is a volunteer-based effort founded by a group of Syrian physicians who practice in different countries around the world. The initiative aims to advance the field of Emergency Medicine (EM) in Syria and help in the post-conflict health care reconstruction."
+    },
+    "objectivesSection": {
+      "title": "Our Objectives",
+      "educateTitle": "Education",
+      "educateDescription": "We strive to educate and inspire the next generation of emergency physicians in Syria by equipping them with the latest knowledge, essential skills, and core values that we acquired by practicing in modern health care systems, and we are working on transferring this knowledge to Syrian Emergency physicians. To this end, we plan to sponsor conferences, workshops, symposia, and a virtual learning platform. Moreover, we strive to create a curriculum and a training program for the paramedics, and Emergency technicians.",
+      "integrationTitle": "National Integration",
+      "integrationDescription": "Our goal is to update and improve the training programs across the different health systems in Syria into a high-quality national curriculum for emergency medicine residents. This ensures improved education and equal training opportunities for all, fostering a comprehensive and inclusive medical training system throughout the country.",
+      "networkTitle": "Building a Network of Stakeholders",
+      "networkDescription": "Collaboration with other national and international groups and organizations who are interested in advancing health delivery and health education in Syria, and most importantly, coordinate with the Syrian Ministry of Health."
+    }
   }
 }
