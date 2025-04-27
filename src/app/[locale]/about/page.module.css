@@ -1,32 +1,31 @@
-.aboutPage{
+.aboutPage {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 100vh;
-  margin-top: 100px;
+  margin: 50px 0 50px;
   text-align: center;
 }
 
-.aboutPage h1{
-  font-size: 2rem;
-  color: var(--primary);
-  font-weight: 1000;
-  margin-bottom: 1rem;
-  font-size: 2rem;
-}
-.landingSection{
+.landingSection {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   width: 100%;
   flex-wrap: wrap;
-  padding: 80px 50px;
+  padding: 80px 50px 0;
 }
 
+.landingSection h1 {
+  font-size: 2rem;
+  color: var(--primary);
+  font-weight: 1000;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
 
-.landingSection p{
-  font-size: 1.2rem;
+.landingSection p {
+  font-size: 1.3rem;
   color: #333;
   font-weight: 400;
   line-height: 1.5;
@@ -45,16 +44,78 @@
   max-height: 100%;
 }
 
+.missionSection {
+  padding: 80px 50px;
+}
 
-@media (width<=640px) {
+.missionSection p {
+  font-size: 1.3rem;
+  color: #333;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+
+.objectivesSection ul {
+  margin-top: 40px;
+  display: flex;
+  padding: 0;
+  list-style: none;
+  flex-wrap: wrap;
+  gap: 20px;
+  text-align: center;
+  justify-content: center;
+}
+
+.objectivesSection li {
+  font-size: 1.3rem;
+  color: #333;
+  font-weight: 400;
+  line-height: 1.5;
+  margin-bottom: 10px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.objectivesSection li span {
+  align-self: center;
+}
+
+.objectivesSection li h3 {
+  font-size: 1.7rem;
+  font-weight: 1000;
+  margin-bottom: 1rem;
+}
+
+.objectivesSection li p {
+  font-size: 1.3rem;
+  color: #333;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+
+@media (width<=720px) {
   .landingSection P {
-    font-size: 16px;
+    font-size: 18px;
   }
-  .landingSection h1{
+
+  .landingSection h1 {
     font-size: 24px;
   }
-  .landingSection{
+
+  .landingSection {
     padding: 10px;
+  }
+
+  .objectivesSection ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .objectivesSection li p {
+    font-size: 18px;
   }
 
 }
