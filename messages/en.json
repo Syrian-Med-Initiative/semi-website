@@ -63,5 +63,9 @@
     "membersSection": {
       "title": "Our Members"
     }
+  },
+  "comingSoon": {
+    "title": "Coming Soon",
+    "description": "We are working hard to bring this page to you. Stay tuned!!"
   }
 }

@@ -52,11 +52,11 @@ function Navigation() {
         <li className={`${pathname.includes("/events") ? styles.active : ""}`}>
           <Link href="/events" onClick={()=>{setIsActive(false)}}>{t("events")}</Link>
         </li>
-        <li className={`${pathname.includes("/members" )? styles.active : ""}`}>
-          <Link href="/Resources" onClick={()=>{setIsActive(false)}}>{t("resources")}</Link>
+        <li className={`${pathname.includes("/resources" )? styles.active : ""}`}>
+          <Link href="/coming-soon" onClick={()=>{setIsActive(false)}}>{t("resources")}</Link>
         </li>
         <li className={`${pathname.includes("/support") ? styles.active : ""}`}>
-          <Link href="/support" onClick={()=>{setIsActive(false)}}>{t("supportUs")}</Link>
+          <Link href="/coming-soon" onClick={()=>{setIsActive(false)}}>{t("supportUs")}</Link>
         </li>
       </ul>
       <button onClick={switchLanguage} className={styles.langSwitch}>
