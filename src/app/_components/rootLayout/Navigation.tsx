@@ -44,19 +44,19 @@ function Navigation() {
 
       <ul className={`${isActive ? styles.active : ""}`}>
         <li className={`${pathname === `/${currentLocale}` ? styles.active : ""}`}>
-          <Link href="/" onClick={()=>{setIsActive(false)}}>{t("home")}</Link>
+          <Link href={`/${currentLocale}/`} onClick={() => { setIsActive(false); }}>{t("home")}</Link>
         </li>
         <li className={`${pathname.includes("/about") ? styles.active : ""}`}>
-          <Link href="/about" onClick={()=>{setIsActive(false)}}>{t("about")}</Link>
+          <Link href={`/${currentLocale}/about`} onClick={() => { setIsActive(false); }}>{t("about")}</Link>
         </li>
         <li className={`${pathname.includes("/events") ? styles.active : ""}`}>
-          <Link href="/events" onClick={()=>{setIsActive(false)}}>{t("events")}</Link>
+          <Link href={`/${currentLocale}/events`} onClick={() => { setIsActive(false); }}>{t("events")}</Link>
         </li>
-        <li className={`${pathname.includes("/resources" )? styles.active : ""}`}>
-          <Link href="/coming-soon" onClick={()=>{setIsActive(false)}}>{t("resources")}</Link>
+        <li className={`${pathname.includes("/resources") ? styles.active : ""}`}>
+          <Link href={`/${currentLocale}/coming-soon`} onClick={() => { setIsActive(false); }}>{t("resources")}</Link>
         </li>
         <li className={`${pathname.includes("/support") ? styles.active : ""}`}>
-          <Link href="/coming-soon" onClick={()=>{setIsActive(false)}}>{t("supportUs")}</Link>
+          <Link href={`/${currentLocale}/coming-soon`} onClick={() => { setIsActive(false); }}>{t("supportUs")}</Link>
         </li>
       </ul>
       <button onClick={switchLanguage} className={styles.langSwitch}>
