@@ -31,7 +31,7 @@ function Navigation() {
     <nav className={styles.nav}>
       <div className={styles.logo}>
         <Image
-          src="/logo.png"
+          src="/logo-2.png"
           alt="Logo"
           width={100}
           height={20}

@@ -84,7 +84,7 @@ function Card({ cardData }: { cardData: CardData }) {
             ? description
             : `${description.slice(0, 250)}...`
           : description}
-        {description.length > 500 && (
+        {description.length > 250 && (
           <span className={styles.readMore} onClick={toggleReadMore}>
             {isExpanded ? "Show Less" : "Read More"}
           </span>
