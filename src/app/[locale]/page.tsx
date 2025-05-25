@@ -4,7 +4,6 @@ import LandingSection from "../_components/Page/LandingSection";
 import AboutSection from "../_components/Page/AboutSection";
 import CarouselSection from "../_components/Page/CarouselSection";
 import { useTranslations } from "next-intl";
-import { describe } from "node:test";
 
 export default function Home() {
   const t = useTranslations("homePage");
