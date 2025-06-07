@@ -1,6 +1,7 @@
 import { useTranslations } from 'next-intl';
 import Button from '../Button/Button'
 import styles from './LandingSection.module.css'
+import Link from 'next/link';
 function LandingSection() {
     const t = useTranslations('homePage.landingSection');
     return (
@@ -10,12 +11,11 @@ function LandingSection() {
             <h1 className={styles.title}>
               {t('title')}
             </h1>
-            <p className={styles.description}>
-              {t('description')}
-            </p>
             <div className={styles.cta}>
-              <Button href="/support">
-                {t('SupportUs')}
+              <Button >
+                <Link href="#NEWS_LETTER" className={styles.newsletterLink}>
+                  {t('newslette')}
+                </Link>
               </Button>
               <Button href="/events">
                 {t('upcomingEvents')}

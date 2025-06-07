@@ -1,9 +1,9 @@
 :root {
   --background: #ffffff;
   --foreground: #000000;
-  --primary: #4B7F52;
-  --primary-light: #4B7F52;
-  --primary-dark: #4B7F52;
+  --primary: #6A994E;
+  --primary-light: #A7C957;
+  --primary-dark: #386641;
   --secondary: #7DD181;
   --secondary-light: #7DD181;
   --secondary-dark: #7DD181;
@@ -13,11 +13,12 @@
 }
 
 html {
-  font-family: var(--font-inter); /* Default font */
+  font-family: var(--font-inter); 
+  scroll-behavior: smooth;
 }
 
 html[lang="ar"] {
-  font-family: var(--font-cairo); /* Arabic font */
+  font-family: var(--font-cairo); 
 }
 
 

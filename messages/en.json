@@ -4,16 +4,15 @@
     "upcomingEvents": "Upcoming Events",
     "landingSection": {
       "title": "Together we elevate emergency medicine in Syria",
-      "description": "Learn, train, and contribute to saving lives through a specialized platform for emergency physicians.",
-      "SupportUs": "Support our mission",
+      "newslette": "Join our Newsletter",
       "upcomingEvents": "Upcoming Events"
     },
     "aboutSection": {
-      "title": "About Us",
-      "description": "We are a group of emergency medicine physicians dedicated to providing the best possible care for patients in emergency situations.",
+      "title": "Our Mission",
+      "description": "SEMI is a volunteer-based effort founded by a group of Syrian physicians who practice in different countries around the world. The initiative aims to advance the field of Emergency Medicine (EM) in Syria and help in the post-conflict health care reconstruction.",
       "learnMore": "Learn More"
     },
-    "newsletter": "newsletter"
+    "newsletter": "Our Newsletter"
   },
   "navigation": {
     "title": "Syrian Emergency Medicine Initiative",

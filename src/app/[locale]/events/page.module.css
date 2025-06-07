@@ -1,0 +1,18 @@
+/*  style={{
+        minHeight: "100vh",
+        display: "flex",
+        justifyContent: "center",
+        flexDirection: "column",
+        paddingTop: "100px",
+        alignItems: "center",
+      }} */
+
+.eventsPage{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
