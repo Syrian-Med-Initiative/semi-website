@@ -8,6 +8,7 @@ import { usePathname, useRouter } from "next/navigation";
 import { IoLanguageOutline } from "react-icons/io5";
 import { useTranslations } from "next-intl";
 
+
 function Navigation() {
   const [isActive, setIsActive] = useState(false);
   const router = useRouter();
@@ -29,7 +30,12 @@ function Navigation() {
 
   return (
     <nav className={styles.nav}>
-      <div className={styles.logo}>
+      <div className={styles.logo} onClick={
+        () =>{
+          setIsActive(false);
+          router.push(`/${currentLocale}/`);
+        }
+      } >
         <Image
           src="/logo-2.png"
           alt="Logo"
@@ -51,6 +57,9 @@ function Navigation() {
         </li>
         <li className={`${pathname.includes("/events") ? styles.active : ""}`}>
           <Link href={`/${currentLocale}/events`} onClick={() => { setIsActive(false); }}>{t("events")}</Link>
+        </li>
+        <li className={`${pathname.includes("/Webinars") ? styles.active : ""}`}>
+          <Link href={`/${currentLocale}/coming-soon`} onClick={() => { setIsActive(false); }}>{t("Webinars")}</Link>
         </li>
         <li className={`${pathname.includes("/resources") ? styles.active : ""}`}>
           <Link href={`/${currentLocale}/coming-soon`} onClick={() => { setIsActive(false); }}>{t("resources")}</Link>
