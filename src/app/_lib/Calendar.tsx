@@ -9,6 +9,8 @@ import Modal from "../_components/Modal/Modal";
 import styles from "./Calendar.module.css";
 import { useParams } from "next/navigation";
 import { useTranslations } from "next-intl";
+import rrulePlugin from '@fullcalendar/rrule';
+
 
 type EventType = {
   title: string;
@@ -86,6 +88,7 @@ export default function Calendar() {
           interactionPlugin,
           iCalendarPlugin,
           listPlugin,
+          rrulePlugin,
         ]}
         initialView={initialView}
         events={events.map((event) => ({

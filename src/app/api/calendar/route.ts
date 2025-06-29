@@ -1,9 +1,11 @@
 import { NextResponse } from "next/server";
 import ical from "node-ical";
+import { RRule } from "rrule";
 
 const ICS_URL =
-  "https://outlook.office365.com/owa/calendar/953b6b74a2db49fab2a60f3438dcaa76@semi2025.onmicrosoft.com/6d30114cc5e648f081eab9ec37171d012502950368585467898/calendar.ics";
+"https://outlook.office365.com/owa/calendar/4b7e14c043224c5180ee3d2105b2741c@semi2025.onmicrosoft.com/a2552bd095ad4826a5a5d8734734a4f614053516545606322797/calendar.ics";
 
+// "https://outlook.office365.com/owa/calendar/953b6b74a2db49fab2a60f3438dcaa76@semi2025.onmicrosoft.com/6d30114cc5e648f081eab9ec37171d012502950368585467898/calendar.ics";
 export async function GET() {
   try {
     const res = await fetch(ICS_URL);
@@ -25,6 +27,8 @@ export async function GET() {
       const meetingId = idMatch ? idMatch[1].replace(/\s+/g, "") : null;
       const passcode = passcodeMatch ? passcodeMatch[1].replace(/\s+/g, "") : null;
 
+      const rrule = e.rrule instanceof RRule ? e.rrule.toString() : null;
+
       // Map the fields to FullCalendar-compatible format
       const fullCalendarEvent = {
         title: e.summary, // Event title
@@ -34,13 +38,14 @@ export async function GET() {
         description: e.description, // Event description
         allDay: e.start.getHours() === 0 && e.end.getHours() === 0, // Whether the event is all-day
         extendedProps: {
-        url: meetingLink, // Link to the meeting (Teams URL)
-        meetingId: meetingId, // Meeting ID
-        passcode: passcode, // Meeting passcode
-        uid: e.uid, // Unique event identifier
-        status: e.status, // Status (e.g., CONFIRMED)
-        sequence: e.sequence, // Sequence number
+          url: meetingLink, // Link to the meeting (Teams URL)
+          meetingId: meetingId, // Meeting ID
+          passcode: passcode, // Meeting passcode
+          uid: e.uid, // Unique event identifier
+          status: e.status, // Status (e.g., CONFIRMED)
+          sequence: e.sequence, // Sequence number
         },
+        ...(rrule ? { rrule } : {}),
       };
 
       return fullCalendarEvent;
