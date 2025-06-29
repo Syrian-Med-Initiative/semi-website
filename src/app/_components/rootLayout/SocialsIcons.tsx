@@ -12,7 +12,7 @@ function SocialsIcons() {
       >
         <FaLinkedin size={22} color="black" />
       </a>
-      <a href="mailto:aemn22384@gmail.com" rel="noopener noreferrer">
+      <a href="mailto:admin@semi2025.onmicrosoft.com" rel="noopener noreferrer">
         <MdEmail size={22} color="black" />
       </a>
     </div>
