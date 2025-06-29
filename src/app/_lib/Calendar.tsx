@@ -173,31 +173,6 @@ export default function Calendar() {
           });
           setIsModalOpen(true);
         }}
-        datesSet={(info) => {
-          if (initialView === "dayGridMonth") return;
-          const calendarApi = info.view.calendar;
-          const prevButton = document.querySelector(
-            ".fc-prev-button"
-          ) as HTMLButtonElement;
-          const nextButton = document.querySelector(
-            ".fc-next-button"
-          ) as HTMLButtonElement;
-
-          if (prevButton) {
-            prevButton.disabled = !calendarApi
-              .getEvents()
-              .some(
-                (event) => event.start && new Date(event.start) < info.start
-              );
-            prevButton.setAttribute("title", "No more events");
-          }
-          if (nextButton) {
-            nextButton.disabled = !calendarApi
-              .getEvents()
-              .some((event) => event.start && new Date(event.start) > info.end);
-            nextButton.setAttribute("title", "No more events");
-          }
-        }}
         buttonText={{
           today: t("today"),
           month: t("month"),
