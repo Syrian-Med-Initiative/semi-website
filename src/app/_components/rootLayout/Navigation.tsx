@@ -18,7 +18,6 @@ function Navigation() {
   function handleMenuToggle() {
     setIsActive(!isActive);
   }
-  console.log(pathname)
 
   function switchLanguage() {
     const currentLocale = pathname.split('/')[1]; // Extract current locale from the path

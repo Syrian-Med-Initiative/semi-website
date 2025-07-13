@@ -9,6 +9,8 @@ import Modal from "../_components/Modal/Modal";
 import styles from "./Calendar.module.css";
 import { useParams } from "next/navigation";
 import { useTranslations } from "next-intl";
+import rrulePlugin from '@fullcalendar/rrule';
+
 
 type EventType = {
   title: string;
@@ -86,6 +88,7 @@ export default function Calendar() {
           interactionPlugin,
           iCalendarPlugin,
           listPlugin,
+          rrulePlugin,
         ]}
         initialView={initialView}
         events={events.map((event) => ({
@@ -169,31 +172,6 @@ export default function Calendar() {
             passcode,
           });
           setIsModalOpen(true);
-        }}
-        datesSet={(info) => {
-          if (initialView === "dayGridMonth") return;
-          const calendarApi = info.view.calendar;
-          const prevButton = document.querySelector(
-            ".fc-prev-button"
-          ) as HTMLButtonElement;
-          const nextButton = document.querySelector(
-            ".fc-next-button"
-          ) as HTMLButtonElement;
-
-          if (prevButton) {
-            prevButton.disabled = !calendarApi
-              .getEvents()
-              .some(
-                (event) => event.start && new Date(event.start) < info.start
-              );
-            prevButton.setAttribute("title", "No more events");
-          }
-          if (nextButton) {
-            nextButton.disabled = !calendarApi
-              .getEvents()
-              .some((event) => event.start && new Date(event.start) > info.end);
-            nextButton.setAttribute("title", "No more events");
-          }
         }}
         buttonText={{
           today: t("today"),
