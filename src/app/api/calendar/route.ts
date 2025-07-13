@@ -2,8 +2,7 @@ import { NextResponse } from "next/server";
 import ical from "node-ical";
 
 const ICS_URL =
-  "https://outlook.office365.com/owa/calendar/953b6b74a2db49fab2a60f3438dcaa76@semi2025.onmicrosoft.com/6d30114cc5e648f081eab9ec37171d012502950368585467898/calendar.ics";
-
+"https://outlook.office365.com/owa/calendar/4b7e14c043224c5180ee3d2105b2741c@semi2025.onmicrosoft.com/1a7cf41a30ad487f9637dba1c68729d46853677543521191071/calendar.ics"
 export async function GET() {
   try {
     const res = await fetch(ICS_URL);
