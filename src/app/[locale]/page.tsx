@@ -46,6 +46,10 @@ export default function Home() {
           paddingTop: "10px",
         }}
       ></iframe>
+      
+    <iframe src="https://semi2025.sharepoint.com/sites/SyrianEmergencyMedicineInitiative-/_layouts/15/embed.aspx?UniqueId=ef41e2c3-b8a8-41f0-bf00-2f90f5e388c6&embed=%7B%22ust%22%3Atrue%2C%22hv%22%3A%22CopyEmbedCode%22%7D&referrer=StreamWebApp&referrerScenario=EmbedDialog.Create" width="640" height="360" frameborder="0" scrolling="no" allowfullscreen title="Educational Day 1.mp4"></iframe>
+
+
     </div>
   );
 }
