@@ -5,6 +5,7 @@ import { MdEmail } from "react-icons/md";
 function SocialsIcons() {
   return (
     <div className={styles.socials}>
+      <span>Contact Us</span>
       <a
         href="https://www.linkedin.com/company/syrian-emergency-medicine-initiative/"
         target="_blank"
@@ -12,7 +13,7 @@ function SocialsIcons() {
       >
         <FaLinkedin size={22} color="black" />
       </a>
-      <a href="mailto:admin@semi2025.onmicrosoft.com" rel="noopener noreferrer">
+      <a href="mailto:info@semi2025.org " rel="noopener noreferrer">
         <MdEmail size={22} color="black" />
       </a>
     </div>
