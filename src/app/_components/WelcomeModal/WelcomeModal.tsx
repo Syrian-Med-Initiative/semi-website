@@ -2,7 +2,6 @@
 import Modal from "../Modal/Modal";
 import { useEffect, useState } from "react";
 import styles from "./WelcomeModal.module.css";
-import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useTranslations } from "next-intl";
 export default function WelcomeModal() {
@@ -35,9 +34,9 @@ export default function WelcomeModal() {
             <div className={styles.qrCodeContainer}>
                 <img src={`/qr-code-${currentLocale}.png`} alt="QR Code" />
             </div>
-            <Link href={`/files/Conference-Program-${currentLocale === "ar" ? "Arabic" : "English"}-2025.pdf`} download className={styles.downloadLink}>
+            <a href={`/files/Conference-Program-${currentLocale === "ar" ? "Arabic" : "English"}-2025.pdf`} download className={styles.downloadLink}>
                 {t("downloadLink")}
-            </Link>
+            </a>
         </Modal>
     );
 }
