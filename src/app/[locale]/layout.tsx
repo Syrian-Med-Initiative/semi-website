@@ -31,6 +31,11 @@ export default async function RootLayout({
 
   return (
     <html lang={locale} className={`${cairo.variable} ${inter.variable}`}>
+      <head >
+        <title>SEMI2025</title>
+        <meta property="og:image" content={`/logo-2.png`} />
+        <meta name="twitter:image" content={`/logo-2.png`} />
+      </head>
       <body>
         <NextIntlClientProvider>
           <Header />
