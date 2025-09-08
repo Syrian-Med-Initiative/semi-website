@@ -1,0 +1,23 @@
+.qrCodeContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:10px  25% ;
+}
+
+.qrCodeContainer img {
+    max-width: 100%;
+    height: auto;
+}
+
+.description {
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 1em;
+}
+
+.downloadLink{
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+}                   

@@ -5,11 +5,13 @@ import AboutSection from "../_components/Page/AboutSection";
 import CarouselSection from "../_components/Page/CarouselSection";
 import { useTranslations } from "next-intl";
 import { membersData } from "../_lib/memberData";
+import WelcomeModal from "../_components/WelcomeModal/WelcomeModal";
 
 export default function Home() {
   const t = useTranslations("homePage");
 
   return (
+   <>
     <div className={styles.homePage}>
       <LandingSection />
       <AboutSection />
@@ -48,5 +50,7 @@ export default function Home() {
       ></iframe>
 
     </div>
+    <WelcomeModal />
+    </>
   );
 }

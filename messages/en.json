@@ -67,5 +67,10 @@
   "comingSoon": {
     "title": "Coming Soon",
     "description": "We are working hard to bring this page to you. Stay tuned!!"
+  },
+  "welcomeModal": {
+      "title": "The First Emergency Medicine Conference in Syria",
+      "description": "Scan the QR code or click the link below to download the conference details.",
+      "downloadLink": "Download the conference details"
   }
 }
