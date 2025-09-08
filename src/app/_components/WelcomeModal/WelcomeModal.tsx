@@ -29,6 +29,8 @@ export default function WelcomeModal() {
 
     return (
         <Modal isOpen={isOpen} onClose={closeModal} title={t("title")}>
+            <p className={styles.date}>{t("date")}</p>
+            <p className={styles.venue}>{t("venue")}</p>
             <p className={styles.description}>{t("description")}</p>
             <div className={styles.qrCodeContainer}>
                 <img src={`/qr-code-${currentLocale}.png`} alt="QR Code" />

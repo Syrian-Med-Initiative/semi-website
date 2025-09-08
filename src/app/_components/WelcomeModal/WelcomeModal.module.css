@@ -10,9 +10,19 @@
     height: auto;
 }
 
-.description {
+.date {
+    text-align: center;
+    font-size: 1em;
+    font-weight: bold;
+}
+.venue {
     text-align: center;
     margin-bottom: 15px;
+    font-size: 1em;
+    font-weight: bold;
+}
+.description {
+    text-align: center;
     font-size: 1em;
 }
 
