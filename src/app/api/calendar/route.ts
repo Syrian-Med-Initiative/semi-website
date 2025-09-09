@@ -35,7 +35,7 @@ export async function GET() {
         end: e.end.toISOString().replace("Z", "+03:00"),
         location: e.location, // Event location
         description: e.description, // Event description
-        allDay: e.start.toISOString().getHours() === 0 && e.end.toISOString().getHours() === 0, // Whether the event is all-day
+        allDay: e.start.getHours() === 0 && e.end.getHours() === 0, // Whether the event is all-day
         extendedProps: {
           url: meetingLink, // Link to the meeting (Teams URL)
           meetingId: meetingId, // Meeting ID
