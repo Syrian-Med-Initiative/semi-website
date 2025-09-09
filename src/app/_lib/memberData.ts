@@ -48,5 +48,11 @@ export const membersData: CardData[] = [
     description:
     'Dr. Yaser Marwan Hamsho is an experienced Emergency Medicine Specialist with a subspecialty focus in trauma. With over 15 years of medical expertise, Dr. Hamsho has held key roles in emergency departments across Syria and Qatar, providing high-acuity care and performing life-saving procedures. He earned his MD from Aleppo University and holds dual certifications from the Syrian Board in Emergency Medicine and Orthopedic Surgery. Currently serving as an Emergency Specialist at Al-Wakra Hospital, Qatar, Dr. Hamsho is dedicated to evidence-based medicine, clinical excellence, and ongoing professional development. His skill set includes advanced intubation, emergency ultrasound diagnostics, trauma management, and limb fracture care. He has also contributed to official medical missions, including supporting major national events like FIFA. His commitment to patient care has been recognized through multiple awards, including "Hero of the Year" and "Best Physician."',
     imageUrl: "/members/Yaser-Marwan.png",
+  },
+  {
+    title: "Tarek Alrefai",
+    description:
+      "Dr. Tarek Ahmad Alrefai is a Consultant in Emergency Medicine and Clinical Toxicology at Hamad Medical Corporation, Qatar. He earned his medical degree from Damascus University and holds the Syrian and Arab Board certifications in Emergency Medicine, as well as membership in the Royal College of Emergency Medicine (MRCEM). His postgraduate training includes a residency at Damascus General Hospital, a consolidation program and fellowship in Emergency Medicine at Hamad Medical Corporation, where he achieved consultant-level competencies in patient care, research, education, and administration. With more than 20 years of clinical and academic experience, Dr. Alrefai has served as Director of the Syrian National Poison Center and a WHO adviser in for poison center, toxicology and chemical safety. He is currently the Assistant Program Director for the Toxicology Fellowship at HMC, where he plays a leading role in medical education and training. He has authored multiple publications, presented internationally, and is recognized for his contributions to clinical care, research, and medical education.",
+    imageUrl: "/members/Tarek-Alrefai.png",
   }
 ];
