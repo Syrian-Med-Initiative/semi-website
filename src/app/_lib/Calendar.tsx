@@ -90,6 +90,7 @@ export default function Calendar() {
           listPlugin,
           rrulePlugin,
         ]}
+        timeZone="Asia/Damascus"
         initialView={initialView}
         events={events.map((event) => ({
           ...event,
