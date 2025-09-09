@@ -141,11 +141,13 @@ export default function Calendar() {
                   {dateRange?.start.toLocaleString("en", {
                     hour: "2-digit",
                     minute: "2-digit",
+                    timeZone: "Asia/Damascus",
                   })}
                   &nbsp;-&nbsp;
                   {dateRange?.end.toLocaleString("en", {
                     hour: "2-digit",
                     minute: "2-digit",
+                    timeZone: "Asia/Damascus",
                   })}
                 </div>
               )}
