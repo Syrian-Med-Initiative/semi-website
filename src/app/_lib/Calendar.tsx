@@ -193,12 +193,14 @@ export default function Calendar() {
                 selectedEvent.start.toLocaleString("en", {
                   hour: "2-digit",
                   minute: "2-digit",
+                  timeZone: "Asia/Damascus",
                 })}
               &nbsp;-&nbsp;
               {selectedEvent?.end &&
                 selectedEvent.end.toLocaleString("en", {
                   hour: "2-digit",
                   minute: "2-digit",
+                  timeZone: "Asia/Damascus",
                 })}
             </div>
             {selectedEvent?.location && (
