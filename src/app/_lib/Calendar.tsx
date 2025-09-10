@@ -90,6 +90,7 @@ export default function Calendar() {
           listPlugin,
           rrulePlugin,
         ]}
+        timeZone="Asia/Damascus"
         initialView={initialView}
         events={events.map((event) => ({
           ...event,
@@ -140,11 +141,13 @@ export default function Calendar() {
                   {dateRange?.start.toLocaleString("en", {
                     hour: "2-digit",
                     minute: "2-digit",
+                    timeZone: "Asia/Damascus",
                   })}
                   &nbsp;-&nbsp;
                   {dateRange?.end.toLocaleString("en", {
                     hour: "2-digit",
                     minute: "2-digit",
+                    timeZone: "Asia/Damascus",
                   })}
                 </div>
               )}
@@ -192,12 +195,14 @@ export default function Calendar() {
                 selectedEvent.start.toLocaleString("en", {
                   hour: "2-digit",
                   minute: "2-digit",
+                  timeZone: "Asia/Damascus",
                 })}
               &nbsp;-&nbsp;
               {selectedEvent?.end &&
                 selectedEvent.end.toLocaleString("en", {
                   hour: "2-digit",
                   minute: "2-digit",
+                  timeZone: "Asia/Damascus",
                 })}
             </div>
             {selectedEvent?.location && (
