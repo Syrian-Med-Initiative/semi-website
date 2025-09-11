@@ -10,7 +10,7 @@ import styles from "./Calendar.module.css";
 import { useParams } from "next/navigation";
 import { useTranslations } from "next-intl";
 import rrulePlugin from '@fullcalendar/rrule';
-
+import momentTimezonePlugin from '@fullcalendar/moment-timezone';
 
 type EventType = {
   title: string;
@@ -89,6 +89,7 @@ export default function Calendar() {
           iCalendarPlugin,
           listPlugin,
           rrulePlugin,
+          momentTimezonePlugin
         ]}
         timeZone="Asia/Damascus"
         initialView={initialView}
@@ -116,7 +117,8 @@ export default function Calendar() {
         locale={locale}
         eventContent={(events) => {
           const { title } = events.event._def;
-          const dateRange = events.event._instance?.range;
+          const { start, end } = events.event;
+          const displayEnd = end ?? (start ? new Date(start.getTime() + 60 * 60 * 1000) : null);
           return (
             <div
               className="event-content"
@@ -134,17 +136,17 @@ export default function Calendar() {
                 textWrap: "wrap",
                 cursor: "pointer",
               }}
-            >
+            > 
               <div className="event-title">{title}</div>
               {initialView === "dayGridMonth" && (
                 <div className="event-time">
-                  {dateRange?.start.toLocaleString("en", {
+                  {start?.toLocaleString("en", {
                     hour: "2-digit",
                     minute: "2-digit",
                     timeZone: "Asia/Damascus",
                   })}
                   &nbsp;-&nbsp;
-                  {dateRange?.end.toLocaleString("en", {
+                  {displayEnd?.toLocaleString("en", {
                     hour: "2-digit",
                     minute: "2-digit",
                     timeZone: "Asia/Damascus",
@@ -155,19 +157,17 @@ export default function Calendar() {
           );
         }}
         eventClick={(clickInfo) => {
-          const { title, extendedProps } = clickInfo.event;
-          const range = clickInfo.event._instance?.range;
-          const startDate = range ? new Date(range.start) : null;
-          const endDate = range ? new Date(range.end) : null;
+          const { title, extendedProps, start, end } = clickInfo.event;
           const description = extendedProps.description || null;
           const location = extendedProps.location || null;
           const url = extendedProps.url || null;
           const meetingId = extendedProps.meetingId || null;
           const passcode = extendedProps.passcode || null;
+          const eventEnd = end ?? (start ? new Date(start.getTime() + 60 * 60 * 1000) : null);
           setSelectedEvent({
             title,
-            start: startDate,
-            end: endDate,
+            start,
+            end: eventEnd,
             description,
             location,
             url,
@@ -230,46 +230,3 @@ export default function Calendar() {
     </div>
   );
 }
-
-// const events = [
-//   {
-//     title: "Education Day 3",
-//     start: "2025-04-21T06:00:00.000Z",
-//     end: "2025-04-21T08:30:00.000Z",
-//     description: "This is a description for Education Day 3.",
-//     location: "Location for Education Day 3",
-//   },
-//   {
-//     title: "Education Day 4",
-//     start: "2025-05-23T06:20:00.000Z",
-//     end: "2025-04-23T08:00:00.000Z",
-//     description: "This is a description for Education Day 4.",
-//   },
-//   //add tow events in the same day
-//   {
-//     title: "Education Day 5",
-//     start: "2025-04-23T06:20:00.000Z",
-//     end: "2025-04-23T08:00:00.000Z",
-//     description: "This is a description for Education Day 5.",
-//   },
-//   {
-//     title: "Education Day 6",
-//     start: "2025-04-23T06:20:00.000Z",
-//     end: "2025-04-23T08:00:00.000Z",
-//     description: "This is a description for Education Day 6.",
-//   },
-//   // add arabic events
-//   {
-//     title: "يوم التعليم 1",
-//     start: "2025-04-21T06:00:00.000Z",
-//     end: "2025-04-21T08:30:00.000Z",
-//     description: "هذا هو الوصف ليوم التعليم 1.",
-//     location: "الموقع ليوم التعليم 1",
-//   },
-//   {
-//     title: "يوم التعليم 2",
-//     start: "2025-04-23T06:20:00.000Z",
-//     end: "2025-04-23T08:00:00.000Z",
-//     description: "هذا هو الوصف ليوم التعليم 2.",
-//   },
-// ];
