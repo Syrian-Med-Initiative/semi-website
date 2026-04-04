@@ -18,7 +18,7 @@
     "@fullcalendar/react": "^6.1.19",
     "@fullcalendar/rrule": "^6.1.19",
     "axios": "^1.8.4",
-    "next": "15.2.4",
+    "next": "15.2.8",
     "next-intl": "^4.0.2",
     "node-ical": "^0.20.1",
     "react": "^19.0.0",
